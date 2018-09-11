@@ -10,6 +10,7 @@ exports.config = {
    * Array of application names.
    */
   app_name: ['Test Monitor'],
+  agent_enabled: true,
   /**
    * Your New Relic license key.
    */

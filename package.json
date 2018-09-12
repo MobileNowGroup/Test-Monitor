@@ -6,9 +6,9 @@
     "node": ">=4"
   },
   "scripts": {
-    "lint": "eslint .",
-    "start": "node .",
-    "posttest": "npm run lint && nsp check"
+    "dev": "pandora dev",
+    "start": "pandora start --name test-monit `pandora-dashboard-dir`",
+    "stop": "pandora stop"
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -17,7 +17,7 @@
     "loopback": "^3.19.0",
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^6.0.0",
-    "newrelic": "^4.8.1",
+    "pandora": "^1.9.0",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^2.0.0"
   },

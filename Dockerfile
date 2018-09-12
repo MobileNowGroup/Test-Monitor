@@ -3,7 +3,7 @@ FROM node:8.9.4
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-RUN npm install --registry=https://registry.npm.taobao.org/ -g pm2
+RUN npm install --registry=https://registry.npm.taobao.org/ -g pandora-dashboard
 
 ADD package.json /usr/src/app/package.json
 
@@ -11,6 +11,10 @@ RUN npm install --registry=https://registry.npm.taobao.org --production
 
 COPY . /usr/src/app/
 
-EXPOSE 3001
+COPY ./docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod o+x /docker-entrypoint.sh
 
-CMD [ "pm2", "start", "pm2.yml", "--no-daemon"]
+EXPOSE 3003
+EXPOSE 9081
+
+ENTRYPOINT [ "/docker-entrypoint.sh" ]

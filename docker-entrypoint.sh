@@ -1,3 +1,2 @@
 #!/bin/bash
-
-npm run start && tail -f ~/logs/pandorajs/daemon_std.log
+pm2 start pm2.yml --no-daemon

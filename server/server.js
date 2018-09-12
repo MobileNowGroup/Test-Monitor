@@ -1,5 +1,6 @@
 'use strict';
 
+var oneapm = require('oneapm');
 var loopback = require('loopback');
 var boot = require('loopback-boot');
 

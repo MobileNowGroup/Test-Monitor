@@ -6,9 +6,6 @@
     "node": ">=4"
   },
   "scripts": {
-    "dev": "pandora dev",
-    "start": "pandora start --name test-monit `pandora-dashboard-dir`",
-    "stop": "pandora stop"
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -17,7 +14,7 @@
     "loopback": "^3.19.0",
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^6.0.0",
-    "pandora": "^1.9.0",
+    "oneapm": "^2.1.11",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^2.0.0"
   },
